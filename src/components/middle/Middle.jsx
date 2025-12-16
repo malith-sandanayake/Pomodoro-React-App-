@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import './Middle.css'
 
-function Middle({pomoTime, start, setStart}) {
-
-    const [pause, setPause] = useState(true);
+function Middle({pomoTime, start, setStart, pause, setPause, setIsRunning}) {
 
     function formatTime(){
         const minutes = Math.floor(pomoTime/ 60);
@@ -17,18 +15,22 @@ function Middle({pomoTime, start, setStart}) {
 
     function handleStart(){
         setStart(true);
+        setIsRunning(true);
     }
 
     function handlePause(){
         setPause(false);
+        setIsRunning(false);
     }   
     
     function handleResume(){
         setPause(true);
+        setIsRunning(true);
     }
     
     function handleCancel(){
         setStart(false);
+        setIsRunning(false);
     }
 
     return ( 
