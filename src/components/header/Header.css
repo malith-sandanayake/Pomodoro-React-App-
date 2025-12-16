@@ -1,0 +1,50 @@
+.upper{
+    display: flex;
+    justify-content: center;
+    max-width: 650px; 
+    background-color: crimson;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 7px;
+    padding-top: 10px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.brandname{
+    margin-left: 20px;
+    color: white;
+    padding: 0px 20px;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.setting{
+    display: flex;
+    margin-right: 40px;
+    gap: 5px;
+}
+
+.btnset1{
+    padding: 5px 15px;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: normal;
+    background-color: orange;
+    border: none;
+    border-radius: 10px;
+    color: crimson;
+    cursor: pointer;
+}
+
+.btnset1:hover{
+    font-weight: 550;
+}

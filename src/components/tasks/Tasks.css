@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Outfit:wght@100..900&display=swap');
+
+.tasks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.addTask{
+    border: 2px rgb(233, 214, 214);
+    border-style: dashed;
+    width: 450px;
+    padding: 18px 0;
+    background-color: rgb(201, 73, 101);  
+    font-size: 20px;
+    color: white;
+    font-family: Outfit;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.tasks .count-text{
+    color: rgb(230, 224, 224);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.tasks .task-name{
+    color: white;
+    font-size: 18px;
+    margin-top: 5px;
+    font-family: Outfit;
+}
+
+.task-game{
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    border-bottom: 2px solid white;
+    align-items: center;
+}
+
+.task-list p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: 500;
+}
+
+.task-game .task-btn{
+    background-color: crimson;
+    color: white;
+    font-weight: 600;
+    border: none;
+    background-color: rgb(243, 73, 110);
+    max-height: 60px;
+    cursor: pointer;
+}
+
+.task-popup{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 450px;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    margin: 0 auto;
+}
+
+.task-popup input{
+    margin-top: 10px;
+    border: none;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-weight: 550;
+    color: grey;    
+    font-style: italic;
+}
+
+.task-popup input:focus{
+    border: none;
+    outline: none;
+    font-style: normal;
+    font-family: Outfit;
+}
+
+.tasklist-title{
+    padding-left: 10px;
+    font-weight: 530;
+    margin-bottom: 3px;
+    font-family: Outfit;
+}
+
+.est{
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+}
+
+.est p{
+    padding: 8px 0;
+    padding-left: 5px;
+    padding-right: 30px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.estbtns{
+    display: flex;
+    padding-left: 10px;
+    gap: 4px;
+}
+
+.estbtns .btn1{
+    background-color: white;
+    border: 1px solid grey;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.estbtns .btn1:hover{
+    background-color: rgba(236, 231, 231, 0.404);
+}
+
+.estbtns .btn2:hover{
+    background-color: rgba(236, 231, 231, 0.404);
+}
+
+.estbtns .btn2{
+    background-color: white;
+    border: 1px solid grey;
+    padding: 8px;
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.est p{
+    background-color: rgba(128, 128, 128, 0.285);
+}
+
+.footer{
+    background-color: rgba(188, 186, 186, 0.687);
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.footer button{
+    padding: 10px 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    font-family: Outfit;
+    cursor: pointer;
+}
+
+.footer .btn1{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.footer .btn1:hover{    
+    background-color: rgba(53, 53, 53, 0.208);
+}
+
+.footer .btn2{
+    margin-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: rgba(38, 38, 38, 0.632);
+    color: white;
+}   
+
+.footer .btn2:hover{
+    background-color: rgba(38, 38, 38, 0.39);
+}   
+
+.select-tasks{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+    background-color: white;
+    margin-bottom: 8px;
+    border-radius: 8px;
+}
+
+.select-tasks .bar1 {
+    display: flex;
+    gap: 20px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.select-tasks .bar1 p{
+    color: black;
+}
+
+.select-tasks .bar2 button{
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.bar1 ._loopcount{
+    border: 1px solid black;
+    padding: 5px;
+}
