@@ -1,13 +1,15 @@
 import { useState } from "react";
 import "./tasks.css";
-import Middle from "../middle/Middle";
 
-function Tasks() {
+function Tasks({setPomoTime}) {
 
     const [addTask, setAddTask] = useState(false);
     const [estPomodoro, setEstPomodoro] = useState(1);
     const [taskName, setTaskName] = useState("");
     const [todoList, setTodoList] = useState([]);
+    const [onGoingTaskName, setOnGoingTaskName] = useState("Task Name");
+    const [onGoingPomoCount, setOnGoingPomoCount] = useState(0);
+    
 
     function handleSave(){
         if (!taskName){
@@ -42,24 +44,51 @@ function Tasks() {
         setTodoList(prevList => prevList.filter((task, i) => i !== index));
     }
 
-    function handleSpecificTask(){
+    function handleSpecificTask(index, task_name, count){
         setPomoTime(1500);
+        handleDeleteTask(index);
+        setOnGoingTaskName(task_name);
+        setOnGoingPomoCount(count);
     }
 
     
-
     return (
         <div className="tasks">
             <p className="count-text">#1</p>
             <div className="task-game">
-                <p className="task-name">Task Name</p>
+                <div className="onGoingTask">
+                    <p className="task-name"
+                        style={{fontWeight: onGoingTaskName !== "Task Name"? "bold" : "normal",
+                    fontSize : onGoingTaskName !== "Task Name"? 23 : 18}}
+                    >
+                        {onGoingTaskName}
+                    </p>
+
+                    {/* Rectangle Logic */}
+                    <div className="rectangle-container" style={{display: 'flex', gap: '5px', marginTop: '10px'}}>
+                            {Array.from({length: onGoingPomoCount}).map((_, i) => (
+                                <div
+                                    key = {i}
+                                    className = "pomo-rectangle"
+                                    style = {{
+                                        width: '8px',
+                                        height: '20px',
+                                        backgroundColor: 'white',
+                                        border: '1px solid white',
+                                    }}
+                                >
+                                </div>
+                            ))}
+                    </div>
+                    
+                </div>
                 <button className="task-btn">:</button>
             </div>
             <div className="task-list">
                 <p>Tasks</p>
                 
             {todoList.map((task, index) => (
-                <div className="select-tasks" key={index} onClick={handleSpecificTask}>
+                <div className="select-tasks" key={index} onClick={() =>handleSpecificTask(index, task.name, task.p_count)}>
                     <div className="bar1">
                         <p className="_taskname">{task.name}</p>
                         <p className="_loopcount">{task.p_count}</p>

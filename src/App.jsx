@@ -6,12 +6,13 @@ import { useState } from "react";
 function App() {
 
   const [pomoTime, setPomoTime] = useState(0);
+  const [start, setStart] = useState(false);
 
   return ( 
     <>
       <Header/>
-      <Middle pomoTime={pomoTime}/>
-      <Tasks/>
+      <Middle pomoTime={pomoTime} start={start} setStart={setStart}/>
+      <Tasks setPomoTime={setPomoTime}/>
     </>
    );
 }

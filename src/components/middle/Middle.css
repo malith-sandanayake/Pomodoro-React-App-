@@ -43,3 +43,23 @@
     font-weight: 600;
     cursor: pointer;
 }
+
+.stbtn button{
+    margin-bottom: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 40px;
+    background-color: white;
+    color: rgb(247, 76, 113);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.stbtn{
+    display: flex;
+    gap: 10px;
+}
+

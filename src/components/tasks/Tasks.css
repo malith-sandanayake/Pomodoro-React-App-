@@ -42,6 +42,11 @@
     align-items: center;
 }
 
+.onGoingTask{
+    display: flex;
+    gap: 40px;
+}
+
 .task-list p{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
