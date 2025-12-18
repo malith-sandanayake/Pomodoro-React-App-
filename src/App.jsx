@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     let interval = null;
-
+    /*
     if (start && isRunning && pomoTime > 0){
       interval = setInterval(() => {
         setPomoTime((prevTime) => prevTime - 1);
@@ -24,12 +24,34 @@ function App() {
 
     return () => clearInterval(interval);
     }, [start, isRunning, pomoTime]);
+    */
+
+    if (start && isRunning){
+      interval = setInterval(() => {
+        setPomoTime((prevTime) => {
+          if (prevTime > 0){
+            return prevTime - 1;
+          }else {
+            clearInterval(interval);
+            setIsRunning(false);
+            setStart(false);  
+            return 0;
+          }
+        });
+      }, 1000)
+    } else{
+      clearInterval(interval);
+    }
+
+    return () => clearInterval(interval);
+
+  }, [start, isRunning, setIsRunning, setStart]);
 
   return ( 
     <>
       <Header/>
       <Middle pomoTime={pomoTime} start={start} setStart={setStart} pause={pause} 
-      setPause={setPause} setIsRunning={setIsRunning}
+      setPause={setPause} setIsRunning={setIsRunning} setPomoTime={setPomoTime}
       />
       <Tasks setPomoTime={setPomoTime}/>
     </>
